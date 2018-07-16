@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.root.submission1catalougemovie">
-
-    <uses-permission android:name="android.permission.INTERNET" />
+    package="com.example.root.made_submission1">
 
     <application
         android:allowBackup="true"
@@ -18,11 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".DetailActivity"
-            android:label="@string/title_activity_detail"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:parentActivityName=".HomeActivity"></activity>
     </application>
 
 </manifest>

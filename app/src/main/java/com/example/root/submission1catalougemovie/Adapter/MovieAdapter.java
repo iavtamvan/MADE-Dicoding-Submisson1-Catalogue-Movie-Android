@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.root.submission1catalougemovie.DetailMovieActivity;
+import com.example.root.submission1catalougemovie.DetailActivity;
 import com.example.root.submission1catalougemovie.Helper.Config;
 import com.example.root.submission1catalougemovie.Model.ResultsItem;
 import com.example.root.submission1catalougemovie.R;
@@ -20,7 +20,7 @@ import com.example.root.submission1catalougemovie.R;
 import java.util.ArrayList;
 
 /**
- * Created by root on 1/20/18.
+ * Created by root on 7/16/18.
  */
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder> {
     private Context context;
@@ -57,10 +57,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
         holder.cv_klick_detail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "" + position, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(context, "" + position, Toast.LENGTH_SHORT).show();
 //                holder.getItemId();
-                Intent intent = new Intent(context, DetailMovieActivity.class);
-                intent.putExtra(Config.BUNDLE_IMAGE, listPopuler.get(position).getPosterPath());
+                Intent intent = new Intent(context, DetailActivity.class);
+                intent.putExtra(Config.BUNDLE_POSTER_IMAGE, "https://image.tmdb.org/t/p/w500" +listPopuler.get(position).getPosterPath());
                 intent.putExtra(Config.BUNDLE_TITTLE, holder.tvJudulFilm.getText().toString().trim());
                 intent.putExtra(Config.BUNDLE_OVERVIEW, listPopuler.get(position).getOverview());
                 intent.putExtra(Config.BUNDLE_RELEASE_DATE, holder.tvrelease.getText().toString().trim());
@@ -69,6 +69,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
                 intent.putExtra(Config.BUNDLE_VOTE_AVERAGE, listPopuler.get(position).getVoteAverage());
                 intent.putExtra(Config.BUNDLE_POPULARITY, listPopuler.get(position).getPopularity());
                 intent.putExtra(Config.BUNDLE_ORIGINAL_LANGUAGE, listPopuler.get(position).getOriginalLanguage());
+                intent.putExtra(Config.BUNDLE_BACKDROPH_IMAGE, "https://image.tmdb.org/t/p/w500" + listPopuler.get(position).getBackdropPath());
                 context.startActivity(intent);
             }
         });

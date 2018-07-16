@@ -22,7 +22,7 @@ public class ResultsItem {
     private String title;
 
     @SerializedName("genre_ids")
-    private ArrayList<Integer> genreIds;
+    private ArrayList<String> genreIds;
 
     @SerializedName("poster_path")
     private String posterPath;
@@ -34,19 +34,19 @@ public class ResultsItem {
     private String releaseDate;
 
     @SerializedName("vote_average")
-    private double voteAverage;
+    private String voteAverage;
 
     @SerializedName("popularity")
-    private double popularity;
+    private String popularity;
 
     @SerializedName("id")
-    private int id;
+    private String id;
 
     @SerializedName("adult")
     private boolean adult;
 
     @SerializedName("vote_count")
-    private int voteCount;
+    private String voteCount;
 
     public void setOverview(String overview) {
         this.overview = overview;
@@ -88,11 +88,11 @@ public class ResultsItem {
         return title;
     }
 
-    public void setGenreIds(ArrayList<Integer> genreIds) {
+    public void setGenreIds(ArrayList<String> genreIds) {
         this.genreIds = genreIds;
     }
 
-    public ArrayList<Integer> getGenreIds() {
+    public ArrayList<String> getGenreIds() {
         return genreIds;
     }
 
@@ -120,27 +120,27 @@ public class ResultsItem {
         return releaseDate;
     }
 
-    public void setVoteAverage(double voteAverage) {
+    public void setVoteAverage(String voteAverage) {
         this.voteAverage = voteAverage;
     }
 
-    public double getVoteAverage() {
+    public String getVoteAverage() {
         return voteAverage;
     }
 
-    public void setPopularity(double popularity) {
+    public void setPopularity(String popularity) {
         this.popularity = popularity;
     }
 
-    public double getPopularity() {
+    public String getPopularity() {
         return popularity;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
@@ -152,11 +152,11 @@ public class ResultsItem {
         return adult;
     }
 
-    public void setVoteCount(int voteCount) {
+    public void setVoteCount(String voteCount) {
         this.voteCount = voteCount;
     }
 
-    public int getVoteCount() {
+    public String getVoteCount() {
         return voteCount;
     }
 }

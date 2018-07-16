@@ -5,7 +5,8 @@ public final class Config {
     public static final String ERROR_LIST = "Response Skiped";
 
 
-    public static final String BUNDLE_IMAGE = "bundle_image";
+    public static final String BUNDLE_POSTER_IMAGE = "bundle_image";
+    public static final String BUNDLE_BACKDROPH_IMAGE = "bundle_image_backdroph";
     public static final String BUNDLE_TITTLE = "bundle_tittle";
     public static final String BUNDLE_OVERVIEW = "bundle_overview";
     public static final String BUNDLE_RELEASE_DATE = "bundle_release_date";

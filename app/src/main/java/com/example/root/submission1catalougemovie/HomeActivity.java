@@ -1,5 +1,6 @@
 package com.example.root.submission1catalougemovie;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -27,7 +28,6 @@ public class HomeActivity extends AppCompatActivity {
     private EditText edtCariMovie;
     private Button btnCariMovie;
 
-    private ArrayList<MovieModel> listMovie;
     private ArrayList<ResultsItem> listResults;
     private RecyclerView rv;
 
@@ -37,7 +37,6 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         initView();
 
-        listMovie = new ArrayList<>();
         listResults = new ArrayList<>();
 
         btnCariMovie.setOnClickListener(new View.OnClickListener() {
